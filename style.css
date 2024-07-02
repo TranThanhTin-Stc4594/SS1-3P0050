@@ -11,26 +11,25 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    margin: 20%;
     height: 100vh;
+    text-align: center;
 }
 
 #wrapper {
-    min-height: 100%;
     display: flex;
     flex-direction: column;
     padding: 20px;
     padding-left: 10%;
     padding-top: 2%;
 }
-
 .container {
     flex: 1;
     padding: 20px;
-    position: fixed;
+    position: relative;
+    bottom: 100%;
+    right: 0;
     left: 0;
-    right:0;
-    bottom: 0;
 }
 
 .header {
@@ -39,6 +38,8 @@ font-size: 20px;
 }
 .department {
     border: 5%;
+    align-items: center;
+    justify-content: center;
 }
 
 .image-container {
@@ -48,6 +49,8 @@ font-size: 20px;
     border: 2px solid #fff;
     padding: 10px;
     border-radius: 10px;
+    width: 80%;
+    height: 20%;
 }
 
 .factory-image {
@@ -60,11 +63,11 @@ font-size: 20px;
     flex: 1;
     margin-left: 20%;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 .company-info h1 {
-    font-size: 24px;
+    font-size: 15px;
 }
 
 .company-info p {
@@ -77,11 +80,11 @@ font-size: 20px;
 
 #hide p {
     text-align: left;
-
+    color: black;
+    background-color: white;
     margin: 10px 0;
-}
-
-@media (max-width: 768px) {
+} 
+@media (max-width: 1200px) {
     body {
         padding: 10px;
     }
@@ -91,17 +94,20 @@ font-size: 20px;
     .company-info h1 { font-size: 12px;
     }
     input[type="text"] {
-        font-size: 14px;
+        font-size: 16px;
         padding: 8px;
     }
 
     #hide p {
-        font-size: 14px;
+        font-size: 16px;
+    }
+    .department{
+        font-size: 16px;
     }
 }
 
-@media (max-width: 480px) {
-    input[type="text"] {
+@media (max-width: 1000px) {
+    input[type="button"] {
         font-size: 12px;
         padding: 6px;
     }
@@ -111,7 +117,25 @@ font-size: 20px;
     #hide p {
         font-size: 12px;
     }
+    .department{
+        font-size: 12px;
+    }
+    .factory-image{
+        display: none;
+        align-items: left;
+    }
+    .image-container{
+        border: none;
+    }
+    .company-info{
+        display: block;
+    }
 }
+@media (max-height:730px) {
+
+.company-info{
+    display: none;
+}}
 input[type="button"] {
     font-size: 16px;
     border: none;
